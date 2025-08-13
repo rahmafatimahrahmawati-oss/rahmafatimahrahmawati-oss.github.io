@@ -1,0 +1,243 @@
+/* Mengambil font dari Google Fonts: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ---- ATURAN DASAR ---- */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+/* ---- HEADER & NAVIGASI ---- */
+header {
+    background: #fff;
+    padding: 2rem 8rem;
+    border-bottom: 1px solid #e9ecef;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.5rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+/* ---- SEKSI UTAMA ---- */
+section {
+    padding: 7rem 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #343a40;
+}
+
+/* ---- BAGIAN TENTANG SAYA ---- */
+#tentang-saya {
+    background-color: #fff;
+    text-align: center;
+}
+
+#tentang-saya p {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ---- LINK DI BAGIAN ABOUT ME ---- */
+.about-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.about-link-item {
+    display: block;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: left;
+    text-decoration: none;
+    color: #343a40;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-link-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.about-link-item h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    color: #000;
+}
+
+.about-link-item p {
+    font-size: 1rem;
+    margin: 0;
+    text-align: left;
+}
+
+/* ---- SEKSI LAINNYA ---- */
+#pengalaman, #karya-tulis, #pendidikan, #skill {
+    background-color: #f8f9fa;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-8px);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-item-content {
+    padding: 1.5rem;
+}
+
+.project-item-content h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.project-item-content p {
+    margin: 0;
+    color: #6c757d;
+}
+
+/* ---- BAGIAN PENDIDIKAN & SKILLS ---- */
+#pendidikan p, #skill p {
+    margin-bottom: 0.5rem;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ---- BAGIAN KONTAK ---- */
+#kontak {
+    background-color: #fff;
+    text-align: center;
+}
+
+#kontak p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+#kontak a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* ---- FOOTER ---- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+footer p {
+    margin: -10;
+    font-size: 0.9rem;
+}
+
+/* ---- MEDIA QUERY UNTUK RESPONSIVE DESIGN ---- */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    header {
+        padding: 2rem 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    header .header-left {
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    .profile-picture {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .skill-grid, .about-links {
+        grid-template-columns: 1fr;
+    }
+    .about-link-item {
+        text-align: center;
+    }
+}
