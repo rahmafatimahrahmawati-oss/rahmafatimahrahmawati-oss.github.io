@@ -18,7 +18,7 @@ body {
     padding: 0 4rem;
 }
 
-/* ---- HEADER & NAVIGASI ---- */
+/* --- HEADER & NAVIGASI --- */
 header {
     background: #fff;
     padding: 2rem 8rem;
@@ -68,7 +68,7 @@ nav ul li a:hover {
     color: #000;
 }
 
-/* ---- SEKSI UTAMA ---- */
+/* --- SEKSI UTAMA --- */
 section {
     padding: 7rem 0;
 }
@@ -80,7 +80,7 @@ section h2 {
     color: #343a40;
 }
 
-/* ---- BAGIAN TENTANG SAYA ---- */
+/* --- BAGIAN TENTANG SAYA --- */
 #tentang-saya {
     background-color: #fff;
     text-align: center;
@@ -92,7 +92,7 @@ section h2 {
     margin: 0 auto;
 }
 
-/* ---- LINK DI BAGIAN ABOUT ME ---- */
+/* --- LINK DI BAGIAN ABOUT ME --- */
 .about-links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -129,7 +129,7 @@ section h2 {
     text-align: left;
 }
 
-/* ---- SEKSI LAINNYA ---- */
+/* --- SEKSI LAINNYA --- */
 #pengalaman, #karya-tulis, #pendidikan, #skill {
     background-color: #f8f9fa;
 }
@@ -172,7 +172,7 @@ section h2 {
     color: #6c757d;
 }
 
-/* ---- BAGIAN PENDIDIKAN & SKILLS ---- */
+/* --- BAGIAN PENDIDIKAN & SKILLS --- */
 #pendidikan p, #skill p {
     margin-bottom: 0.5rem;
 }
@@ -185,7 +185,7 @@ section h2 {
     margin: 0 auto;
 }
 
-/* ---- BAGIAN KONTAK ---- */
+/* --- BAGIAN KONTAK --- */
 #kontak {
     background-color: #fff;
     text-align: center;
@@ -203,7 +203,7 @@ section h2 {
     font-weight: bold;
 }
 
-/* ---- FOOTER ---- */
+/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 2rem;
@@ -212,32 +212,72 @@ footer {
 }
 
 footer p {
-    margin: -10;
+    margin: 0;
     font-size: 0.9rem;
 }
 
-/* ---- MEDIA QUERY UNTUK RESPONSIVE DESIGN ---- */
+/* --- ANIMASI --- */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    25% { transform: translate(-1px, -2px) rotate(-1deg); }
+    50% { transform: translate(-3px, 0px) rotate(1deg); }
+    75% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.project-item:hover {
+    animation: shake 0.5s infinite;
+    cursor: pointer;
+}
+
+/* --- MEDIA QUERY UNTUK RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
     .container {
         padding: 0 1.5rem;
     }
+    
     header {
         padding: 2rem 1.5rem;
         flex-direction: column;
         text-align: center;
     }
+    
     header .header-left {
         flex-direction: column;
         margin-bottom: 1rem;
     }
+    
     .profile-picture {
         margin-right: 0;
         margin-bottom: 1rem;
     }
-    .skill-grid, .about-links {
+    
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    section {
+        padding: 4rem 0;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+    }
+    
+    .about-links {
         grid-template-columns: 1fr;
     }
+    
     .about-link-item {
-        text-align: center;
+        text-align: left;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-grid {
+        grid-template-columns: 1fr;
     }
 }
